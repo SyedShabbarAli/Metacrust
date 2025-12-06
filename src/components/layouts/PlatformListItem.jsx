@@ -1,4 +1,4 @@
-import Xicon from "../../assets/xicon.png";
+import Xicon from "../../assets/xIcon.png";
 
 export default function PlatformListItem({ item, img }) {
   return (

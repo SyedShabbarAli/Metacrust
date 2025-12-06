@@ -35,7 +35,7 @@ import smartCity from "../assets/smartCity.jpg";
 
 import cognitiveImg from "../assets/cognitive.jpg";
 
-import secEl from "../assets/secELem.png";
+import secEl from "../assets/secElem.png";
 import batTech from "../assets/batteryTech.png";
 import cloudTech from "../assets/cloudTech.png";
 import OTA from "../assets/OTA.png";

@@ -1,5 +1,6 @@
 import Xicon from "../../assets/xIcon.png";
 
+// Platform list item component
 export default function PlatformListItem({ item, img }) {
   return (
     <li className="flex gap-x-2  ">

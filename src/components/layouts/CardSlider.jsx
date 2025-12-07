@@ -59,9 +59,9 @@ export default function CardSlider() {
         ];
 
   return (
-    <div className="flex gap-x-6 md:gap-x-20 items-center w-full">
+    <div className="flex gap-x-2 sm:gap-x-4 md:gap-x-8 lg:gap-x-20 items-center w-full justify-center">
       <button
-        className="hover:scale-110 transition-transform duration-300 cursor-pointer"
+        className="hover:scale-110 transition-transform duration-300 cursor-pointer flex-shrink-0"
         onClick={() =>
           handleManualNavigation(
             (currentIndex - 1 + UTILIZATIONS.length) % UTILIZATIONS.length
@@ -71,14 +71,14 @@ export default function CardSlider() {
         <img
           src={marqueImg}
           alt="marqueLogo"
-          className="rotate-180 h-5 w-5 md:h-7 md:w-7"
+          className="rotate-180 h-4 w-4 sm:h-5 sm:w-5 md:h-6 md:w-6 lg:h-7 lg:w-7"
         />
       </button>
       <AnimatePresence mode="popLayout">
         {dataShown.map((card, index) => (
           <motion.div
             layout
-            className="  border-2 h-fit w-[20rem]   text-center bg-cyan-50 rounded-2xl shadow-md flex flex-col gap-4 justify-evenly items-center"
+            className="border-2 h-fit w-full max-w-[16rem] sm:max-w-[18rem] md:max-w-[20rem] text-center bg-cyan-50 rounded-xl md:rounded-2xl shadow-md flex flex-col gap-2 md:gap-4 justify-evenly items-center"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -87,10 +87,10 @@ export default function CardSlider() {
           >
             <img
               src={card.img}
-              className="object-cover  rounded-t-lg h-[16rem] w-full  mb-4   md:mb-2"
+              className="object-cover rounded-t-lg h-[12rem] sm:h-[14rem] md:h-[16rem] w-full mb-2 md:mb-4"
               alt={card.label}
             />
-            <h2 className=" px-2 lg:text-lg  h-14 font-sans font-bold mb-5">
+            <h2 className="px-2 text-sm sm:text-base lg:text-lg min-h-[3rem] md:min-h-[3.5rem] font-sans font-bold mb-3 md:mb-5 flex items-center justify-center">
               {card.label}
             </h2>
             {/* <img
@@ -101,7 +101,7 @@ export default function CardSlider() {
         ))}
       </AnimatePresence>
       <button
-        className="hover:scale-110 transition-transform duration-300 cursor-pointer"
+        className="hover:scale-110 transition-transform duration-300 cursor-pointer flex-shrink-0"
         onClick={() =>
           handleManualNavigation((currentIndex + 1) % UTILIZATIONS.length)
         }
@@ -109,7 +109,7 @@ export default function CardSlider() {
         <img
           src={marqueImg}
           alt="marqueLogo"
-          className=" h-5 w-5 md:h-7 md:w-7"
+          className="h-4 w-4 sm:h-5 sm:w-5 md:h-6 md:w-6 lg:h-7 lg:w-7"
         />
       </button>
     </div>

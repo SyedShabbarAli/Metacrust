@@ -48,7 +48,7 @@ export default function Home() {
   };
 
   return (
-    <div className="w-screen px-4 md:px-20 lg:px-32 flex flex-col gap-y-8 lg:gap-y-28 ">
+    <div className="w-full max-w-screen-2xl mx-auto px-4 sm:px-6 md:px-12 lg:px-20 xl:px-32 flex flex-col gap-y-8 lg:gap-y-28">
       <IndustryPopup />
       <IntroSection />
       <div className="flex gap-x-24">
@@ -69,7 +69,7 @@ export default function Home() {
       </div>
       <YouTubeStylePlayer />
 
-      <div className="relative flex flex-col py-16 px-6">
+      <div className="relative flex flex-col py-8 md:py-12 lg:py-16 px-2 sm:px-4 md:px-6">
         {/* Background decoration */}
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-blue-50/20 to-transparent -z-10 rounded-3xl" />
         
@@ -80,16 +80,16 @@ export default function Home() {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <h2 className="text-2xl md:text-3xl lg:text-5xl font-bold text-center bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 bg-clip-text text-transparent mb-4">
+          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-5xl font-bold text-center bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 bg-clip-text text-transparent mb-3 md:mb-4 px-2">
             Core Highlights
           </h2>
-          <p className="text-sm md:text-lg text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xs sm:text-sm md:text-base lg:text-lg text-gray-600 max-w-3xl mx-auto px-4">
             Key metrics that demonstrate our platform's efficiency
           </p>
         </motion.div>
 
         <motion.div
-          className="grid grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 mt-8"
+          className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 md:gap-6 lg:gap-8 mt-6 md:mt-8"
           variants={coreContainerVariants}
           initial="hidden"
           whileInView="visible"
@@ -100,27 +100,27 @@ export default function Home() {
               key={item.title}
               variants={coreItemVariants}
               whileHover={{ y: -10, scale: 1.05 }}
-              className="group relative bg-white rounded-2xl p-6 md:p-8 shadow-lg hover:shadow-2xl border-2 border-cyan-100 hover:border-cyan-300 transition-all duration-300 flex flex-col items-center text-center"
+              className="group relative bg-white rounded-xl md:rounded-2xl p-3 sm:p-4 md:p-6 lg:p-8 shadow-lg hover:shadow-2xl border-2 border-cyan-100 hover:border-cyan-300 transition-all duration-300 flex flex-col items-center text-center"
             >
               {/* Gradient overlay on hover */}
               <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/0 to-blue-500/0 group-hover:from-cyan-500/5 group-hover:to-blue-500/5 transition-all duration-300 rounded-2xl" />
               
               {/* Icon container */}
-              <div className="relative z-10 mb-6 p-4 bg-gradient-to-br from-cyan-100 to-blue-100 rounded-2xl group-hover:scale-110 transition-transform duration-300">
+              <div className="relative z-10 mb-3 sm:mb-4 md:mb-6 p-2 sm:p-3 md:p-4 bg-gradient-to-br from-cyan-100 to-blue-100 rounded-xl md:rounded-2xl group-hover:scale-110 transition-transform duration-300">
                 <img
                   src={item.img}
                   alt={item.title}
-                  className="object-contain w-12 h-12 md:w-16 md:h-16"
+                  className="object-contain w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 lg:w-16 lg:h-16"
                 />
               </div>
               
               {/* Title */}
-              <h3 className="relative z-10 font-bold text-base md:text-lg lg:text-xl text-gray-900 mb-3">
+              <h3 className="relative z-10 font-bold text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl text-gray-900 mb-2 md:mb-3">
                 {item.title}
               </h3>
               
               {/* Description */}
-              <p className="relative z-10 text-xs md:text-sm lg:text-base text-gray-600 leading-relaxed">
+              <p className="relative z-10 text-[10px] sm:text-xs md:text-sm lg:text-base text-gray-600 leading-relaxed">
                 {item.desc}
               </p>
               
@@ -142,7 +142,7 @@ export default function Home() {
           </ServicesCard>
         ))}
       </div>
-      <div className="relative flex flex-col items-center py-16 px-6">
+      <div className="relative flex flex-col items-center py-8 md:py-12 lg:py-16 px-2 sm:px-4 md:px-6">
         {/* Background decoration */}
         <div className="absolute inset-0 bg-gradient-to-b from-cyan-50/40 via-blue-50/30 to-transparent -z-10 rounded-3xl" />
         
@@ -153,15 +153,15 @@ export default function Home() {
           viewport={{ once: true }}
           className="text-center mb-8"
         >
-          <h2 className="font-sans font-bold text-3xl md:text-4xl lg:text-6xl text-center bg-gradient-to-r from-gray-900 via-cyan-800 to-gray-900 bg-clip-text text-transparent mb-4">
+          <h2 className="font-sans font-bold text-2xl sm:text-3xl md:text-4xl lg:text-6xl text-center bg-gradient-to-r from-gray-900 via-cyan-800 to-gray-900 bg-clip-text text-transparent mb-3 md:mb-4 px-2">
             Utilizations
           </h2>
-          <p className="text-sm md:text-lg text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xs sm:text-sm md:text-base lg:text-lg text-gray-600 max-w-3xl mx-auto px-4">
             Powering secure communication across diverse industries and applications
           </p>
         </motion.div>
         
-        <div className="flex flex-col lg:block gap-8 py-8 w-full">
+        <div className="flex flex-col lg:block gap-4 md:gap-8 py-4 md:py-8 w-full overflow-hidden">
           <CardSlider />
         </div>
       </div>
@@ -171,7 +171,7 @@ export default function Home() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7 }}
         viewport={{ once: true }}
-        className="relative flex flex-col gap-y-12 py-20 px-4 md:px-8"
+        className="relative flex flex-col gap-y-6 md:gap-y-8 lg:gap-y-12 py-8 md:py-12 lg:py-20 px-2 sm:px-4 md:px-6 lg:px-8"
       >
         {/* Text Content */}
         <div className="text-center max-w-4xl mx-auto">
@@ -180,7 +180,7 @@ export default function Home() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="text-3xl md:text-4xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 bg-clip-text text-transparent"
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-bold mb-4 md:mb-6 bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 bg-clip-text text-transparent px-2"
           >
             MetaCrust's Acknowledgement
           </motion.h1>
@@ -190,7 +190,7 @@ export default function Home() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
             viewport={{ once: true }}
-            className="text-xl md:text-2xl lg:text-3xl font-semibold text-cyan-600 mb-6"
+            className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-semibold text-cyan-600 mb-4 md:mb-6 px-2"
           >
             Supported By Leading Innovation Partners
           </motion.p>
@@ -200,14 +200,14 @@ export default function Home() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
-            className="text-base md:text-lg text-gray-600 leading-relaxed"
+            className="text-sm sm:text-base md:text-lg text-gray-600 leading-relaxed px-2"
           >
             {ACKNOWLEDGEMENTS}
           </motion.p>
         </div>
 
         {/* Partner Logos Grid */}
-        <div className="grid grid-cols-3 md:grid-cols-3 lg:grid-cols-3 gap-6 md:gap-10 lg:gap-16 max-w-7xl mx-auto w-full">
+        <div className="grid grid-cols-3 md:grid-cols-3 lg:grid-cols-3 gap-3 sm:gap-4 md:gap-6 lg:gap-10 xl:gap-16 max-w-7xl mx-auto w-full">
           {IMAGES.map((image, index) => (
             <motion.div
               key={image}
@@ -216,7 +216,7 @@ export default function Home() {
               transition={{ duration: 0.5, delay: index * 0.08 }}
               viewport={{ once: true, amount: 0.3 }}
               whileHover={{ scale: 1.08, y: -8 }}
-              className="group relative bg-white p-6 md:p-8 lg:p-10 rounded-2xl shadow-lg hover:shadow-2xl border border-gray-200 hover:border-cyan-300 transition-all duration-300 flex items-center justify-center"
+              className="group relative bg-white p-3 sm:p-4 md:p-6 lg:p-8 xl:p-10 rounded-xl md:rounded-2xl shadow-lg hover:shadow-2xl border border-gray-200 hover:border-cyan-300 transition-all duration-300 flex items-center justify-center"
             >
               {/* Subtle gradient overlay on hover */}
               <div className="absolute inset-0 bg-gradient-to-br from-cyan-50/0 to-blue-50/0 group-hover:from-cyan-50/50 group-hover:to-blue-50/50 rounded-2xl transition-all duration-300" />
@@ -224,7 +224,7 @@ export default function Home() {
               <img
                 src={image}
                 alt="Partner logo"
-                className="relative z-10 object-contain w-full h-20 md:h-32 lg:h-40 opacity-70 group-hover:opacity-100 transition-opacity duration-300"
+                className="relative z-10 object-contain w-full h-12 sm:h-16 md:h-24 lg:h-32 xl:h-40 opacity-70 group-hover:opacity-100 transition-opacity duration-300"
               />
             </motion.div>
           ))}

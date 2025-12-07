@@ -1,77 +1,16 @@
-import { motion } from "framer-motion";
-import TextSection from "./TextSection";
 import dataImg from "../../assets/data-security.webp";
-// import { useNavigate } from "react-router-dom";
 import AnimateButton from "../layouts/AnimateButton";
 
 export default function IntroSection() {
-  // const navigate = useNavigate();
-  const redSpanVariants = {
-    hidden: { opacity: 0, x: -30 },
-    show: {
-      opacity: 1,
-      x: 0,
-      transition: {
-        delay: 0.6,
-        duration: 1,
-        ease: "easeInOut",
-      },
-    },
-  };
-  const blueSpanVariants = {
-    hidden: { opacity: 0, y: -30 },
-    show: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        delay: 1.2,
-        duration: 1,
-        ease: "easeInOut",
-      },
-    },
-  };
-
-  const greySpanVariants = {
-    hidden: { opacity: 0 },
-    show: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        delay: 0.9,
-        duration: 1,
-        ease: "easeInOut",
-      },
-    },
-  };
-
-  const imageVariant = {
-    hidden: { opacity: 0, y: 8 },
-    show: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 1.5,
-        ease: "easeInOut",
-      },
-    },
-  };
   return (
-    <div className="relative bg-gradient-to-br from-white via-cyan-50/40 to-blue-50/60 h-fit w-full rounded-2xl lg:rounded-[2rem] flex flex-col lg:flex-row items-center gap-6 lg:gap-12 py-6 md:py-10 lg:py-20 px-5 md:px-8 lg:px-16 shadow-lg lg:shadow-[0_20px_60px_-15px_rgba(0,0,0,0.15)] border border-cyan-100/40 overflow-hidden backdrop-blur-sm">
+    <div className="relative bg-gradient-to-br from-white via-cyan-50/40 to-blue-50/60 h-fit w-full rounded-2xl lg:rounded-[2rem] flex flex-col lg:flex-row items-center gap-6 lg:gap-12 py-6 md:py-10 lg:py-20 px-5 md:px-8 lg:px-16 shadow-lg lg:shadow-[0_20px_60px_-15px_rgba(0,0,0,0.15)] border border-cyan-100/40 overflow-hidden">
       {/* Static background gradients */}
-      <div className="absolute top-0 right-0 w-[300px] h-[300px] lg:w-[500px] lg:h-[500px] bg-gradient-to-br from-cyan-400/10 to-blue-500/10 rounded-full blur-3xl" />
-      <div className="absolute -bottom-20 -left-20 lg:-bottom-32 lg:-left-32 w-[400px] h-[400px] lg:w-[600px] lg:h-[600px] bg-gradient-to-tr from-blue-400/10 to-cyan-500/10 rounded-full blur-3xl" />
+      <div className="absolute top-0 right-0 w-[300px] h-[300px] lg:w-[500px] lg:h-[500px] bg-gradient-to-br from-cyan-400/10 to-blue-500/10 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute -bottom-20 -left-20 lg:-bottom-32 lg:-left-32 w-[400px] h-[400px] lg:w-[600px] lg:h-[600px] bg-gradient-to-tr from-blue-400/10 to-cyan-500/10 rounded-full blur-3xl pointer-events-none" />
       
       {/* Content Section */}
       <div className="flex-1 relative z-10 w-full text-center lg:text-left">
-        <motion.div
-          variants={{
-            hidden: { opacity: 0, y: 30 },
-            show: { opacity: 1, y: 0, transition: { delay: 0.2, duration: 0.8, ease: "easeOut" } }
-          }}
-          initial="hidden"
-          animate="show"
-          className="mb-4 md:mb-6 lg:mb-10 w-full"
-        >
+        <div className="mb-4 md:mb-6 lg:mb-10 w-full">
           <div className="inline-block mb-2 md:mb-3 px-3 py-1.5 md:px-4 md:py-2 bg-cyan-500/10 rounded-full border border-cyan-500/20">
             <span className="text-[0.6rem] md:text-xs lg:text-sm font-semibold text-cyan-600 tracking-wider uppercase">
               Next-Gen IoT Platform
@@ -82,81 +21,46 @@ export default function IntroSection() {
               METACRUST
             </span>
           </h1>
-        </motion.div>
+        </div>
 
         <div className="space-y-4 md:space-y-6 lg:space-y-10 w-full">
-          <motion.div 
-            className="flex flex-wrap items-center justify-center lg:justify-start gap-1.5 sm:gap-2 md:gap-3 lg:gap-4 leading-tight"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4, duration: 0.8 }}
-          >
-            <motion.span
-              className="py-0.5 md:py-1 lg:py-2 text-base sm:text-lg md:text-2xl lg:text-3xl xl:text-4xl font-black bg-gradient-to-r from-cyan-500 to-cyan-600 bg-clip-text text-transparent leading-none"
-              variants={redSpanVariants}
-              initial="hidden"
-              animate="show"
-            >
+          <div className="flex flex-wrap items-center justify-center lg:justify-start gap-1.5 sm:gap-2 md:gap-3 lg:gap-4 leading-tight">
+            <span className="py-0.5 md:py-1 lg:py-2 text-base sm:text-lg md:text-2xl lg:text-3xl xl:text-4xl font-black bg-gradient-to-r from-cyan-500 to-cyan-600 bg-clip-text text-transparent leading-none">
               Secure
-            </motion.span>
+            </span>
             
             <span className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-cyan-300/50 leading-none">•</span>
             
-            <motion.span
-              className="py-0.5 md:py-1 lg:py-2 text-base sm:text-lg md:text-2xl lg:text-3xl xl:text-4xl font-black bg-gradient-to-r from-gray-700 to-gray-900 bg-clip-text text-transparent leading-none"
-              variants={greySpanVariants}
-              initial="hidden"
-              animate="show"
-            >
+            <span className="py-0.5 md:py-1 lg:py-2 text-base sm:text-lg md:text-2xl lg:text-3xl xl:text-4xl font-black bg-gradient-to-r from-gray-700 to-gray-900 bg-clip-text text-transparent leading-none">
               Scalable
-            </motion.span>
+            </span>
             
             <span className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-cyan-300/50 leading-none">•</span>
             
-            <motion.span
-              className="py-0.5 md:py-1 lg:py-2 text-base sm:text-lg md:text-2xl lg:text-3xl xl:text-4xl font-black bg-gradient-to-r from-red-400 to-red-500 bg-clip-text text-transparent leading-none"
-              variants={blueSpanVariants}
-              initial="hidden"
-              animate="show"
-            >
+            <span className="py-0.5 md:py-1 lg:py-2 text-base sm:text-lg md:text-2xl lg:text-3xl xl:text-4xl font-black bg-gradient-to-r from-red-400 to-red-500 bg-clip-text text-transparent leading-none">
               Energy-Efficient
-            </motion.span>
-          </motion.div>
+            </span>
+          </div>
 
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.8 }}
-            className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl font-bold text-gray-700 leading-relaxed max-w-3xl mx-auto lg:mx-0"
-          >
+          <p className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl font-bold text-gray-700 leading-relaxed max-w-3xl mx-auto lg:mx-0">
             Device Communication & Monitoring Platform
-          </motion.p>
+          </p>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 1.2 }}
-            className="pt-3 md:pt-5 lg:pt-6 flex justify-center lg:justify-start w-full"
-          >
+          <div className="pt-3 md:pt-5 lg:pt-6 flex justify-center lg:justify-start w-full">
             <AnimateButton />
-          </motion.div>
+          </div>
         </div>
       </div>
 
       {/* Image Section */}
-      <motion.div
-        className="relative z-10 w-full lg:w-auto flex justify-center mt-4 lg:mt-0"
-        variants={imageVariant}
-        initial="hidden"
-        animate="show"
-      >
+      <div className="relative z-10 w-full lg:w-auto flex justify-center mt-4 lg:mt-0">
         <img
           src={dataImg}
           className=""
           loading="lazy"
           alt="MetaCrust Platform"
         />
-      </motion.div>
+      </div>
     </div>
   );
 }

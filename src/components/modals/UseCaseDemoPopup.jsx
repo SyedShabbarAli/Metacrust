@@ -33,16 +33,17 @@ export default function UseCaseDemoPopup() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
+            transition={{ duration: 0.2 }}
             onClick={handleClose}
-            className="fixed inset-0 bg-black/60 backdrop-blur-md z-50"
+            className="fixed inset-0 bg-black/50 z-50"
           />
 
           {/* Popup */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.8, y: 50 }}
-            animate={{ opacity: 1, scale: 1, y: 0 }}
-            exit={{ opacity: 0, scale: 0.8, y: 50 }}
-            transition={{ type: "spring", stiffness: 300, damping: 25 }}
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.98 }}
+            transition={{ duration: 0.25, ease: "easeOut" }}
             className="fixed inset-0 flex items-center justify-center z-50 p-4"
             onClick={handleClose}
           >
@@ -79,12 +80,7 @@ export default function UseCaseDemoPopup() {
                 {/* Content */}
                 <div className="flex flex-col items-center text-center space-y-6">
                   {/* Icon */}
-                  <motion.div
-                    initial={{ scale: 0 }}
-                    animate={{ scale: 1 }}
-                    transition={{ delay: 0.2, type: "spring", stiffness: 200 }}
-                    className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center shadow-lg"
-                  >
+                  <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center shadow-lg">
                     <svg
                       className="w-8 h-8 text-white"
                       fill="none"
@@ -104,33 +100,18 @@ export default function UseCaseDemoPopup() {
                         d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
                       />
                     </svg>
-                  </motion.div>
+                  </div>
 
-                  <motion.h2
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.3 }}
-                    className="text-2xl md:text-3xl font-bold text-gray-900 leading-tight px-4"
-                  >
+                  <h2 className="text-2xl md:text-3xl font-bold text-gray-900 leading-tight px-4">
                     Want to see it in action?
-                  </motion.h2>
+                  </h2>
 
-                  <motion.p
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.35 }}
-                    className="text-base md:text-lg text-gray-700 px-4"
-                  >
+                  <p className="text-base md:text-lg text-gray-700 px-4">
                     Watch use-case demos to see how MetaCrust works in real-world applications
-                  </motion.p>
+                  </p>
 
                   {/* Button */}
-                  <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.4 }}
-                    className="w-full pt-2"
-                  >
+                  <div className="w-full pt-2">
                     <button
                       onClick={handleNavigate}
                       className="w-full relative group bg-gradient-to-br from-[#182e41] to-[#25b3ff] text-white font-semibold py-4 px-8 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-2xl overflow-hidden"
@@ -153,7 +134,7 @@ export default function UseCaseDemoPopup() {
                       </span>
                       <div className="absolute inset-0 bg-gradient-to-br from-cyan-400 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                     </button>
-                  </motion.div>
+                  </div>
                 </div>
               </div>
             </div>

@@ -29,10 +29,10 @@ export default function Platform() {
   return (
     <>
       <UseCaseDemoPopup />
-      <div className="w-screen px-10 md:px-14 lg:px-24 flex flex-col gap-y-20 mt-4">
+      <div className="w-screen px-4 md:px-10 lg:px-24 flex flex-col gap-y-20 mt-4">
       <section className="flex flex-col items-center bg-gradient-to-t   from-transparent to-[#bbf8ff]  mb-4   rounded-2xl">
         <Heading label={"Secure Communication for MedTech & IoT Devices"} />
-        <p className="mt-4 text-xs md:text-2xl px-10 font-mono text-center lg:w-3/4 text-black">
+        <p className="mt-4 text-xs md:text-2xl px-4 md:px-10 font-mono text-center lg:w-3/4 text-black">
           MetaCrust’s plug-and-play platform brings real-time encryption, secure
           telemetry, and compliance-ready integration to your devices — in
           minutes, not months.
@@ -47,7 +47,7 @@ export default function Platform() {
         </div>
       </section>
 
-      <section className="relative bg-gradient-to-br from-slate-50 via-cyan-50 to-blue-50 px-6 md:px-10 py-16 rounded-3xl shadow-2xl xl:mx-32 border-2 border-cyan-100 overflow-hidden">
+      <section className="relative bg-gradient-to-br from-slate-50 via-cyan-50 to-blue-50 px-4 md:px-10 py-16 rounded-3xl shadow-2xl xl:mx-32 border-2 border-cyan-100 overflow-hidden">
         {/* Decorative background elements */}
         <div className="absolute top-0 right-0 w-72 h-72 bg-cyan-200/20 rounded-full blur-3xl -z-0" />
         <div className="absolute bottom-0 left-0 w-72 h-72 bg-blue-200/20 rounded-full blur-3xl -z-0" />
@@ -119,7 +119,7 @@ export default function Platform() {
           className="relative z-10 mt-16"
         >
           <div className="bg-gradient-to-r from-cyan-500 via-blue-500 to-cyan-500 p-[2px] rounded-2xl shadow-lg max-w-2xl mx-auto">
-            <div className="bg-white rounded-2xl px-8 py-6">
+            <div className="bg-white rounded-2xl px-4 md:px-8 py-6">
               <p className="text-center font-semibold text-lg md:text-xl lg:text-2xl">
                 <span className="text-red-500">Meta</span>
                 <span className="text-cyan-500">Crust </span>
@@ -130,7 +130,7 @@ export default function Platform() {
         </motion.div>
       </section>
 
-      <section className="relative flex flex-col xl:px-36 items-center text-center py-16 px-6">
+      <section className="relative flex flex-col xl:px-36 items-center text-center py-16 px-4 md:px-6">
         {/* Background decoration */}
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-cyan-50/30 to-transparent -z-10 rounded-3xl" />
         
@@ -215,7 +215,7 @@ export default function Platform() {
         </motion.div>
       </section>
 
-      <section className="relative flex flex-col justify-center items-center py-16 px-6">
+      <section className="relative flex flex-col justify-center items-center py-16 px-4 md:px-6">
         {/* Background decoration */}
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-blue-50/20 to-transparent -z-10 rounded-3xl" />
         
@@ -298,7 +298,7 @@ export default function Platform() {
         </motion.div>
       </section>
 
-      <section className="relative flex flex-col xl:px-36 py-16 px-6">
+      <section className="relative flex flex-col xl:px-36 py-16 px-4 md:px-6">
         {/* Background decoration */}
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-green-50/20 to-transparent -z-10 rounded-3xl" />
         
@@ -386,7 +386,7 @@ export default function Platform() {
         </motion.div>
       </section>
 
-      <section className="relative flex flex-col xl:px-36 items-center py-16 px-6">
+      <section className="relative flex flex-col xl:px-36 items-center py-16 px-4 md:px-6">
         {/* Background decoration */}
         <div className="absolute inset-0 bg-gradient-to-b from-blue-50/30 via-transparent to-cyan-50/30 -z-10 rounded-3xl" />
         

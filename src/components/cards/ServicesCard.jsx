@@ -25,18 +25,18 @@ export default function ServicesCard({ label, children, img }) {
   };
   return (
     <motion.div
-      className="relative font-sans border-2 border-blue-100 text-center lg:text-start w-[90%] h-[90%] py-6 md:py-20 bg-gradient-to-br from-cyan-50 to-white rounded-2xl p-3 lg:p-9 my-6 shadow-md"
+      className="relative font-sans border-2 border-blue-100 text-center lg:text-start w-[95%] sm:w-[90%] h-auto py-5 sm:py-6 md:py-12 lg:py-16 xl:py-20 bg-gradient-to-br from-cyan-50 to-white rounded-xl md:rounded-2xl p-3 sm:p-4 md:p-6 lg:p-9 my-4 sm:my-5 md:my-6 shadow-md"
       variants={divVariants}
       initial="hidden"
       whileHover={{ scale: 1.06 }}
       whileInView="show"
       viewport={{ once: true, amount: 0.4 }}
     >
-      <h1 className="font-semibold text-lg md:text-2xl mb-4">{label}</h1>
-      <p className=" text-sm md:text-base text-black">{children}</p>
+      <h1 className="font-semibold text-base sm:text-lg md:text-xl lg:text-2xl mb-3 md:mb-4">{label}</h1>
+      <p className="text-xs sm:text-sm md:text-base text-black leading-relaxed">{children}</p>
       <motion.img
         src={img}
-        className="absolute z-10  right-[3%] bottom-[15%] w-20 object-contain "
+        className="absolute z-10 right-[3%] bottom-[10%] sm:bottom-[12%] md:bottom-[15%] w-14 sm:w-16 md:w-20 object-contain"
         variants={imgVariants}
         initial="hidden"
         whileInView="show"

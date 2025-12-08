@@ -59,7 +59,7 @@ export default function CardSlider() {
         ];
 
   return (
-    <div className="flex gap-x-2 sm:gap-x-4 md:gap-x-6 lg:gap-x-8 xl:gap-x-12 items-center w-full justify-center">
+    <div className="flex gap-x-3 sm:gap-x-4 md:gap-x-5 lg:gap-x-6 xl:gap-x-10 items-center w-full justify-center">
       <button
         className="hover:scale-110 transition-transform duration-300 cursor-pointer flex-shrink-0"
         onClick={() =>
@@ -78,19 +78,21 @@ export default function CardSlider() {
         {dataShown.map((card, index) => (
           <motion.div
             layout
-            className="border-2 h-fit w-full max-w-[16rem] sm:max-w-[18rem] md:max-w-[20rem] lg:max-w-[22rem] xl:max-w-[28rem] text-center bg-cyan-50 rounded-xl md:rounded-2xl shadow-md flex flex-col gap-2 md:gap-4 justify-evenly items-center"
+            className="border-2 h-fit w-full min-w-[15rem] max-w-[16rem] sm:max-w-[18rem] md:max-w-[19rem] lg:max-w-[21rem] xl:max-w-[26rem] 2xl:max-w-[30rem] text-center bg-cyan-50 rounded-xl md:rounded-2xl shadow-md flex flex-col overflow-hidden"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.7, ease: "easeInOut" }}
             key={`${card.label}-${index}`}
           >
-            <img
-              src={card.img}
-              className="object-cover rounded-t-lg h-[12rem] sm:h-[14rem] md:h-[15rem] lg:h-[16rem] xl:h-[20rem] w-full mb-2 md:mb-4"
-              alt={card.label}
-            />
-            <h2 className="px-2 text-sm sm:text-base md:text-lg lg:text-xl min-h-[3rem] md:min-h-[3.5rem] font-sans font-bold mb-3 md:mb-5 flex items-center justify-center">
+            <div className="w-full aspect-[4/3] overflow-hidden">
+              <img
+                src={card.img}
+                className="object-cover w-full h-full"
+                alt={card.label}
+              />
+            </div>
+            <h2 className="px-3 py-4 md:py-5 text-sm sm:text-base md:text-lg lg:text-xl font-sans font-bold flex items-center justify-center">
               {card.label}
             </h2>
             {/* <img

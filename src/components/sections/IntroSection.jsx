@@ -34,9 +34,44 @@ export default function IntroSection() {
       />
       
       <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-        {/* Content Section */}
+        {/* Image Section - Shows first on mobile */}
         <motion.div 
-          className="text-center lg:text-left"
+          className="relative flex justify-center items-center order-1 lg:order-2"
+          initial={{ opacity: 0, x: 30 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8 }}
+        >
+          {/* Decorative circles - smaller on mobile */}
+          <motion.div 
+            className="absolute top-[-20px] right-[-20px] w-[80px] h-[80px] sm:w-[120px] sm:h-[120px] lg:w-[300px] lg:h-[300px] lg:top-[-50px] lg:right-[-50px] rounded-full opacity-10"
+            style={{ background: 'linear-gradient(to bottom right, #06b6d4, #06b6d4)' }}
+            animate={{ rotate: 360 }}
+            transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+          />
+          <motion.div 
+            className="absolute bottom-[-15px] left-[-15px] w-[60px] h-[60px] sm:w-[90px] sm:h-[90px] lg:w-[200px] lg:h-[200px] lg:bottom-[-30px] lg:left-[-30px] rounded-full opacity-10"
+            style={{ background: 'linear-gradient(to bottom right, #06b6d4, #06b6d4)' }}
+            animate={{ rotate: 360 }}
+            transition={{ duration: 20, repeat: Infinity, ease: "linear", delay: 5 }}
+          />
+          
+          <motion.div
+            className="relative w-full max-w-[280px] sm:max-w-[350px] md:max-w-[450px] lg:max-w-[600px]"
+            animate={{ y: [0, -20, 0] }}
+            transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+          >
+            <img
+              src={dataImg}
+              className="w-full h-auto object-contain drop-shadow-[0_20px_40px_rgba(59,130,246,0.15)]"
+              loading="lazy"
+              alt="MetaCrust Platform"
+            />
+          </motion.div>
+        </motion.div>
+
+        {/* Content Section - Shows second on mobile */}
+        <motion.div 
+          className="text-center lg:text-left order-2 lg:order-1"
           initial={{ opacity: 0, x: -30 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
@@ -116,43 +151,7 @@ export default function IntroSection() {
             </div>
           </div>
         </motion.div>
-
-        {/* Image Section */}
-        <motion.div 
-          className="relative flex justify-center items-center"
-          initial={{ opacity: 0, x: 30 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8 }}
-        >
-          {/* Decorative circles */}
-          <motion.div 
-            className="absolute top-[-50px] right-[-50px] w-[200px] h-[200px] lg:w-[300px] lg:h-[300px] rounded-full opacity-10"
-            style={{ background: 'linear-gradient(to bottom right, #06b6d4, #06b6d4)' }}
-            animate={{ rotate: 360 }}
-            transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-          />
-          <motion.div 
-            className="absolute bottom-[-30px] left-[-30px] w-[150px] h-[150px] lg:w-[200px] lg:h-[200px] rounded-full opacity-10"
-            style={{ background: 'linear-gradient(to bottom right, #06b6d4, #06b6d4)' }}
-            animate={{ rotate: 360 }}
-            transition={{ duration: 20, repeat: Infinity, ease: "linear", delay: 5 }}
-          />
-          
-          <motion.div
-            className="relative w-full max-w-[280px] sm:max-w-[350px] md:max-w-[450px] lg:max-w-[600px]"
-            animate={{ y: [0, -20, 0] }}
-            transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-          >
-            <img
-              src={dataImg}
-              className="w-full h-auto object-contain drop-shadow-[0_20px_40px_rgba(59,130,246,0.15)]"
-              loading="lazy"
-              alt="MetaCrust Platform"
-            />
-          </motion.div>
-        </motion.div>
       </div>
     </div>
   );
 }
-

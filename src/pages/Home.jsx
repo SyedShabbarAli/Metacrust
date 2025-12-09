@@ -45,7 +45,7 @@ export default function Home() {
   useScrollTop();
 
   return (
-    <div className="w-full max-w-screen-2xl mx-auto px-4 sm:px-6 md:px-12 lg:px-20 xl:px-28 flex flex-col gap-y-20">
+    <div className="w-full max-w-screen-2xl mx-auto px-4 sm:px-6 md:px-12 lg:px-20 xl:px-28 flex flex-col gap-y-4 sm:gap-y-8 md:gap-y-12 lg:gap-y-16 xl:gap-y-20">
       
       <IndustryPopup />
       <IntroSection />

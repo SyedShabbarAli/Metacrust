@@ -298,7 +298,7 @@ export default function Platform() {
         </motion.div>
       </section>
 
-      <section className="relative flex flex-col xl:px-36 py-16 px-4 md:px-6">
+      <section className="relative flex flex-col py-16 px-4 md:px-6">
         {/* Background decoration */}
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-green-50/20 to-transparent -z-10 rounded-3xl" />
         
@@ -386,7 +386,7 @@ export default function Platform() {
         </motion.div>
       </section>
 
-      <section className="relative flex flex-col xl:px-36 items-center py-16 px-4 md:px-6">
+      <section className="relative flex flex-col items-center py-16 px-4 md:px-6">
         {/* Background decoration */}
         <div className="absolute inset-0 bg-gradient-to-b from-blue-50/30 via-transparent to-cyan-50/30 -z-10 rounded-3xl" />
         
@@ -491,4 +491,5 @@ export default function Platform() {
     </>
   );
 }
+
 

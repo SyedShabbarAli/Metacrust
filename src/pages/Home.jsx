@@ -195,26 +195,26 @@ export default function Home() {
         </div>
 
         {/* Logos */}
-        <div className="grid grid-cols-3 md:grid-cols-4 gap-8 mt-16 place-items-center">
-          {IMAGES.map((logo, index) => (
-            <motion.div
-              key={logo}
-              variants={fadeInUp}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              whileHover={{ scale: 1.08 }}
-              className="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl border border-gray-200 transition-all"
-            >
-              <img
-                src={logo}
-                alt="Partner Logo"
-                className="w-24 md:w-32 opacity-70 hover:opacity-100 transition"
-              />
-            </motion.div>
-          ))}
-        </div>
+{/* Logos */}
+<div className="w-full overflow-hidden mt-20">
+  <div className="flex items-center whitespace-nowrap animate-scrollLeft">
+    {[...IMAGES, ...IMAGES].map((logo, index) => (
+      <motion.img
+        key={index}
+        src={logo}
+        alt="Partner Logo"
+        variants={fadeInUp}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        className="mx-10 h-20 w-32 object-contain opacity-70 hover:opacity-100 transition-all duration-300"
+      />
+    ))}
+  </div>
+</div>
+
       </section>
     </div>
   );
 }
+

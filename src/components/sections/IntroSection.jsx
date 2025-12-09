@@ -49,7 +49,7 @@ export default function IntroSection() {
             transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
           />
           <motion.div 
-            className="absolute bottom-[-20px] left-[-20px] w-[100px] h-[100px] sm:w-[120px] sm:h-[120px] lg:bottom-[-30px] lg:left-[-30px] lg:w-[200px] lg:h-[200px] rounded-full opacity-10"
+            className="absolute bottom-[0px] left-[0px] w-[100px] h-[100px] sm:w-[120px] sm:h-[120px] lg:bottom-[-30px] lg:left-[-30px] lg:w-[200px] lg:h-[200px] rounded-full opacity-10"
             style={{ background: 'linear-gradient(to bottom right, #06b6d4, #06b6d4)' }}
             animate={{ rotate: 360 }}
             transition={{ duration: 20, repeat: Infinity, ease: "linear", delay: 5 }}
@@ -155,4 +155,5 @@ export default function IntroSection() {
     </div>
   );
 }
+
 

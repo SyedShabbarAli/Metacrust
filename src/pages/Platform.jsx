@@ -31,8 +31,7 @@ export default function Platform() {
       <UseCaseDemoPopup />
       <div className="w-screen px-4 md:px-10 lg:px-24 flex flex-col gap-y-20 mt-4">
       <section className="flex flex-col items-center bg-gradient-to-t   from-transparent to-[#bbf8ff]  mb-4   rounded-2xl">
-        <Heading label={"Secure Communication for MedTech & IoT Devices"} />
-        <h3 className="text-2xl md:text-5xl my-2 md:my-4 text-center px-10 py-6 rounded-2xl undefined md:ml-2 text-center md:text-start font-semibold">Secure Communication for MedTech &amp; IoT Devices</h3>
+        <h3 className="text-2xl md:text-5xl my-2 md:my-4 text-center px-10 py-6 rounded-2xl undefined md:ml-2 text-center md:text-center font-semibold">Secure Communication for MedTech &amp; IoT Devices</h3>
         <p className="mt-4 text-xs md:text-2xl px-4 md:px-10 font-mono text-center lg:w-3/4 text-black">
           MetaCrust’s plug-and-play platform brings real-time encryption, secure
           telemetry, and compliance-ready integration to your devices — in
@@ -492,6 +491,7 @@ export default function Platform() {
     </>
   );
 }
+
 
 
 

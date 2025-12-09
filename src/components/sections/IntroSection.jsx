@@ -1,66 +1,218 @@
-import dataImg from "../../assets/workflows_io.png";
-import AnimateButton from "../layouts/AnimateButton";
+import { useState } from 'react';
 
-export default function IntroSection() {
+// AnimateButton Component
+function AnimateButton() {
   return (
-    <div className="relative bg-gradient-to-br from-white via-cyan-50/40 to-blue-50/60 h-fit w-full rounded-xl md:rounded-2xl lg:rounded-[2rem] flex flex-col lg:flex-row items-center gap-4 sm:gap-6 lg:gap-12 py-6 sm:py-8 md:py-10 lg:py-20 px-4 sm:px-5 md:px-8 lg:px-16 shadow-lg lg:shadow-[0_20px_60px_-15px_rgba(0,0,0,0.15)] border border-cyan-100/40 overflow-hidden">
-      {/* Static background gradients */}
-      <div className="absolute top-0 right-0 w-[300px] h-[300px] lg:w-[500px] lg:h-[500px] bg-gradient-to-br from-cyan-400/10 to-blue-500/10 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute -bottom-20 -left-20 lg:-bottom-32 lg:-left-32 w-[400px] h-[400px] lg:w-[600px] lg:h-[600px] bg-gradient-to-tr from-blue-400/10 to-cyan-500/10 rounded-full blur-3xl pointer-events-none" />
+    <div className="flex flex-wrap gap-3 items-center">
+      <button className="group relative px-8 py-3.5 bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-xl font-semibold text-base shadow-lg shadow-blue-500/30 hover:shadow-xl hover:shadow-blue-500/40 transition-all duration-300 hover:-translate-y-0.5 flex items-center gap-2">
+        Request a Demo
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="group-hover:translate-x-1 transition-transform">
+          <path d="M5 12h14M12 5l7 7-7 7"/>
+        </svg>
+      </button>
+      <button className="px-8 py-3.5 bg-white text-blue-600 rounded-xl font-semibold text-base border-2 border-gray-200 hover:border-gray-300 hover:bg-gray-50 transition-all duration-300 hover:-translate-y-0.5 shadow-sm">
+        Learn More
+      </button>
+    </div>
+  );
+}
+
+// Stats Component
+function StatsSection() {
+  const stats = [
+    { number: "99.9%", label: "Uptime Guarantee" },
+    { number: "10M+", label: "Devices Connected" },
+    { number: "24/7", label: "Support Available" }
+  ];
+
+  return (
+    <div className="grid grid-cols-3 gap-4 lg:gap-8 pt-8 mt-8 border-t-2 border-gray-200">
+      {stats.map((stat, index) => (
+        <div key={index} className="text-left">
+          <div className="text-2xl lg:text-4xl font-extrabold text-blue-600 mb-1">
+            {stat.number}
+          </div>
+          <div className="text-xs lg:text-sm text-gray-600 font-medium">
+            {stat.label}
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+// Main Component
+export default function IntroSection() {
+  const features = [
+    { 
+      name: "Secure", 
+      color: "from-blue-500 to-blue-600",
+      icon: (
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+        </svg>
+      )
+    },
+    { 
+      name: "Scalable", 
+      color: "from-green-500 to-green-600",
+      icon: (
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+          <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+        </svg>
+      )
+    },
+    { 
+      name: "Energy-Efficient", 
+      color: "from-orange-400 to-orange-500",
+      icon: (
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+          <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+        </svg>
+      )
+    }
+  ];
+
+  return (
+    <div className="relative bg-gradient-to-br from-gray-50 via-blue-50/30 to-gray-50 min-h-screen w-full flex items-center overflow-hidden">
+      {/* Animated background gradients */}
+      <div 
+        className="absolute top-0 right-0 w-[400px] h-[400px] lg:w-[600px] lg:h-[600px] bg-gradient-radial from-blue-400/10 to-transparent rounded-full blur-3xl pointer-events-none animate-pulse"
+        style={{ animationDuration: '8s' }}
+      />
+      <div 
+        className="absolute bottom-0 left-0 w-[400px] h-[400px] lg:w-[500px] lg:h-[500px] bg-gradient-radial from-purple-400/8 to-transparent rounded-full blur-3xl pointer-events-none animate-pulse"
+        style={{ animationDuration: '8s', animationDelay: '4s' }}
+      />
       
-      {/* Content Section */}
-      <div className="flex-1 relative z-10 w-full text-center lg:text-left">
-        <div className="mb-4 md:mb-6 lg:mb-10 w-full">
-          <div className="inline-block mb-2 md:mb-3 px-2.5 py-1 sm:px-3 sm:py-1.5 md:px-4 md:py-2 bg-cyan-500/10 rounded-full border border-cyan-500/20">
-            <span className="text-[0.5rem] sm:text-[0.55rem] md:text-[0.6rem] lg:text-xs font-semibold text-cyan-600 tracking-wider uppercase">
-              Next-Gen IoT Platform
-            </span>
+      {/* Content Container */}
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
+          
+          {/* Left Content Section */}
+          <div className="text-center lg:text-left space-y-6 animate-fadeInLeft">
+            <div>
+              <h1 className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-black tracking-tight leading-none mb-6">
+                <span className="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 bg-clip-text text-transparent">
+                  METACRUST
+                </span>
+              </h1>
+              
+              {/* Feature Badges */}
+              <div className="flex flex-wrap justify-center lg:justify-start gap-3 mb-6">
+                {features.map((feature, index) => (
+                  <div
+                    key={index}
+                    className="group flex items-center gap-2 px-4 py-2.5 rounded-full bg-white shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-0.5 border border-gray-200"
+                  >
+                    <div className={`bg-gradient-to-r ${feature.color} p-1.5 rounded-full text-white`}>
+                      {feature.icon}
+                    </div>
+                    <span className={`font-semibold text-sm bg-gradient-to-r ${feature.color} bg-clip-text text-transparent`}>
+                      {feature.name}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <p className="text-lg lg:text-xl text-gray-600 leading-relaxed max-w-2xl mx-auto lg:mx-0 font-medium">
+              Device Communication & Monitoring Platform that revolutionizes IoT connectivity. Seamlessly connect, monitor, and manage thousands of devices with enterprise-grade security and real-time insights.
+            </p>
+
+            <div className="pt-4">
+              <AnimateButton />
+            </div>
+
+            {/* Stats Section */}
+            <StatsSection />
           </div>
-          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-black font-sans tracking-tight leading-[1.1] sm:leading-tight">
-            <span className="bg-gradient-to-r from-gray-900 via-cyan-700 to-blue-900 bg-clip-text text-transparent drop-shadow-sm">
-              METACRUST
-            </span>
-          </h1>
-        </div>
 
-        <div className="space-y-3 sm:space-y-4 md:space-y-6 lg:space-y-10 w-full">
-          <div className="flex flex-wrap items-center justify-center lg:justify-start gap-1 sm:gap-1.5 md:gap-2 lg:gap-2.5 leading-tight">
-            <span className="py-0.5 md:py-1 text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl font-black bg-gradient-to-r from-cyan-500 to-cyan-600 bg-clip-text text-transparent leading-none">
-              Secure
-            </span>
+          {/* Right Image Section */}
+          <div className="relative animate-fadeInRight">
+            {/* Decorative circles */}
+            <div 
+              className="absolute top-0 right-0 w-64 h-64 lg:w-80 lg:h-80 bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-full blur-2xl animate-spin-slow"
+              style={{ animationDuration: '20s' }}
+            />
+            <div 
+              className="absolute bottom-0 left-0 w-48 h-48 lg:w-60 lg:h-60 bg-gradient-to-tr from-purple-500/10 to-blue-500/10 rounded-full blur-2xl animate-spin-slow"
+              style={{ animationDuration: '20s', animationDelay: '10s' }}
+            />
             
-            <span className="text-sm sm:text-base md:text-lg lg:text-xl text-cyan-300/50 leading-none">•</span>
-            
-            <span className="py-0.5 md:py-1 text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl font-black bg-gradient-to-r from-gray-700 to-gray-900 bg-clip-text text-transparent leading-none">
-              Scalable
-            </span>
-            
-            <span className="text-sm sm:text-base md:text-lg lg:text-xl text-cyan-300/50 leading-none">•</span>
-            
-            <span className="py-0.5 md:py-1 text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl font-black bg-gradient-to-r from-red-400 to-red-500 bg-clip-text text-transparent leading-none">
-              Energy-Efficient
-            </span>
-          </div>
-
-          <p className="text-[0.65rem] sm:text-xs md:text-sm lg:text-base font-bold text-gray-700 leading-relaxed max-w-3xl mx-auto lg:mx-0">
-            Device Communication & Monitoring Platform
-          </p>
-
-          <div className="pt-2 sm:pt-3 md:pt-5 lg:pt-6 flex justify-center lg:justify-start w-full">
-            <AnimateButton />
+            <div className="relative animate-float">
+              <img
+                src="https://i.imgur.com/7QxYZGH.png"
+                className="w-full max-w-[500px] lg:max-w-[600px] h-auto object-contain mx-auto drop-shadow-2xl"
+                loading="lazy"
+                alt="MetaCrust IoT Platform"
+              />
+            </div>
           </div>
         </div>
       </div>
 
-      {/* Image Section */}
-      <div className="relative z-10 w-full lg:w-auto flex justify-center mt-2 sm:mt-4 lg:mt-0">
-        <img
-          src={dataImg}
-          className="w-full max-w-[280px] sm:max-w-[320px] md:max-w-[400px] lg:max-w-[500px] h-auto object-contain"
-          loading="lazy"
-          alt="MetaCrust Platform"
-        />
-      </div>
+      <style>{`
+        @keyframes fadeInLeft {
+          from {
+            opacity: 0;
+            transform: translateX(-30px);
+          }
+          to {
+            opacity: 1;
+            transform: translateX(0);
+          }
+        }
+
+        @keyframes fadeInRight {
+          from {
+            opacity: 0;
+            transform: translateX(30px);
+          }
+          to {
+            opacity: 1;
+            transform: translateX(0);
+          }
+        }
+
+        @keyframes float {
+          0%, 100% {
+            transform: translateY(0px);
+          }
+          50% {
+            transform: translateY(-20px);
+          }
+        }
+
+        @keyframes spin-slow {
+          from {
+            transform: rotate(0deg);
+          }
+          to {
+            transform: rotate(360deg);
+          }
+        }
+
+        .animate-fadeInLeft {
+          animation: fadeInLeft 0.8s ease-out;
+        }
+
+        .animate-fadeInRight {
+          animation: fadeInRight 0.8s ease-out;
+        }
+
+        .animate-float {
+          animation: float 6s ease-in-out infinite;
+        }
+
+        .animate-spin-slow {
+          animation: spin-slow 20s linear infinite;
+        }
+
+        .bg-gradient-radial {
+          background: radial-gradient(circle, var(--tw-gradient-stops));
+        }
+      `}</style>
     </div>
   );
 }

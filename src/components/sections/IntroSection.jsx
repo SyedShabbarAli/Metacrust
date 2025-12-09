@@ -101,18 +101,18 @@ export default function IntroSection() {
           </div>
 
           {/* Stats Section */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 lg:gap-6 pt-6 lg:pt-8 border-t-2 border-slate-200">
+          <div className="grid grid-cols-3 gap-3 sm:gap-4 lg:gap-6 pt-6 lg:pt-8 border-t-2 border-slate-200">
             <div className="text-center lg:text-left">
-              <div className="text-2xl lg:text-3xl xl:text-4xl font-extrabold mb-1" style={{ color: '#06b6d4' }}>99.9%</div>
-              <div className="text-xs lg:text-sm text-slate-600 font-medium">Uptime Guarantee</div>
+              <div className="text-lg sm:text-2xl lg:text-3xl xl:text-4xl font-extrabold mb-1" style={{ color: '#06b6d4' }}>99.9%</div>
+              <div className="text-[0.6rem] sm:text-xs lg:text-sm text-slate-600 font-medium">Uptime Guarantee</div>
             </div>
             <div className="text-center lg:text-left">
-              <div className="text-2xl lg:text-3xl xl:text-4xl font-extrabold mb-1" style={{ color: '#06b6d4' }}>10M+</div>
-              <div className="text-xs lg:text-sm text-slate-600 font-medium">Devices Connected</div>
+              <div className="text-lg sm:text-2xl lg:text-3xl xl:text-4xl font-extrabold mb-1" style={{ color: '#06b6d4' }}>10M+</div>
+              <div className="text-[0.6rem] sm:text-xs lg:text-sm text-slate-600 font-medium">Devices Connected</div>
             </div>
             <div className="text-center lg:text-left">
-              <div className="text-2xl lg:text-3xl xl:text-4xl font-extrabold mb-1" style={{ color: '#06b6d4' }}>24/7</div>
-              <div className="text-xs lg:text-sm text-slate-600 font-medium">Support Available</div>
+              <div className="text-lg sm:text-2xl lg:text-3xl xl:text-4xl font-extrabold mb-1" style={{ color: '#06b6d4' }}>24/7</div>
+              <div className="text-[0.6rem] sm:text-xs lg:text-sm text-slate-600 font-medium">Support Available</div>
             </div>
           </div>
         </motion.div>

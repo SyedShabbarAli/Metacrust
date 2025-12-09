@@ -51,7 +51,7 @@ export default function Home() {
       <IntroSection />
 
       {/* Definition Section */}
-      <section className="flex flex-col lg:flex-row gap-10 items-center">
+      <section className="py-12 md:py-16 lg:py-0 flex flex-col lg:flex-row gap-10 items-center">
         <motion.img
           loading="lazy"
           variants={fadeIn}
@@ -71,7 +71,7 @@ export default function Home() {
       <YouTubeStylePlayer />
 
       {/* Core Highlights */}
-      <section className="relative py-16">
+      <section className="relative py-12 md:py-16">
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-blue-50/20 to-transparent rounded-3xl -z-10" />
 
         <motion.div
@@ -123,7 +123,7 @@ export default function Home() {
       </section>
 
       {/* Services Section */}
-      <section className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:-mt-10">
+      <section className="py-12 md:py-16 lg:py-0 grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 md:gap-8 lg:gap-10 lg:-mt-10">
         {SERVICES_DATA.map((service) => (
           <ServicesCard key={service.label} label={service.label} img={service.img}>
             {service.description}
@@ -132,7 +132,7 @@ export default function Home() {
       </section>
 
       {/* Utilizations Section */}
-      <section className="relative py-16 text-center">
+      <section className="relative py-12 md:py-16 text-center">
         <div className="absolute inset-0 bg-gradient-to-b from-cyan-50/40 via-blue-50/30 to-transparent rounded-3xl -z-10" />
 
         <motion.h2
@@ -161,7 +161,7 @@ export default function Home() {
       </section>
 
       {/* Acknowledgements */}
-      <section className="py-20">
+      <section className="py-12 md:py-16 lg:py-20">
         <div className="text-center max-w-4xl mx-auto">
           <motion.h2
             variants={fadeInUp}

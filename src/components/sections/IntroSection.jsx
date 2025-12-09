@@ -82,8 +82,8 @@ export default function IntroSection() {
             <Link to="/connect">
               <motion.div
                 className="inline-flex items-center justify-center gap-2 px-6 py-3.5 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all cursor-pointer"
-                style={{ background: '#00BDFF' }}
-                whileHover={{ y: -2, boxShadow: "0 12px 35px rgba(0, 189, 255, 0.4)" }}
+                style={{ background: '#06b6d4' }}
+                whileHover={{ y: -2, boxShadow: "0 12px 35px rgba(6, 182, 212, 0.4)" }}
               >
                 Request a Demo
                 <ArrowRightIcon className="w-5 h-5" />
@@ -92,7 +92,7 @@ export default function IntroSection() {
             <Link to="/about">
               <motion.div
                 className="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-white font-semibold rounded-xl border-2 border-slate-200 shadow-md hover:shadow-lg hover:bg-slate-50 transition-all cursor-pointer"
-                style={{ color: '#00BDFF' }}
+                style={{ color: '#06b6d4' }}
                 whileHover={{ y: -2 }}
               >
                 Learn More

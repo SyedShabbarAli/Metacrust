@@ -1,65 +1,149 @@
 import dataImg from "../../assets/workflows_io.png";
-import AnimateButton from "../layouts/AnimateButton";
+import { motion } from "framer-motion";
+import { LockClosedIcon, ActivityLogIcon, LightningBoltIcon, ArrowRightIcon } from "@radix-ui/react-icons";
 
 export default function IntroSection() {
   return (
-    <div className="relative bg-gradient-to-br from-white via-cyan-50/40 to-blue-50/60 h-fit w-full rounded-xl md:rounded-2xl lg:rounded-[2rem] flex flex-col lg:flex-row items-center gap-4 sm:gap-6 lg:gap-12 py-6 sm:py-8 md:py-10 lg:py-20 px-4 sm:px-5 md:px-8 lg:px-16 shadow-lg lg:shadow-[0_20px_60px_-15px_rgba(0,0,0,0.15)] border border-cyan-100/40 overflow-hidden">
-      {/* Static background gradients */}
-      <div className="absolute top-0 right-0 w-[300px] h-[300px] lg:w-[500px] lg:h-[500px] bg-gradient-to-br from-cyan-400/10 to-blue-500/10 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute -bottom-20 -left-20 lg:-bottom-32 lg:-left-32 w-[400px] h-[400px] lg:w-[600px] lg:h-[600px] bg-gradient-to-tr from-blue-400/10 to-cyan-500/10 rounded-full blur-3xl pointer-events-none" />
+    <div className="relative bg-gradient-to-br from-white via-cyan-50/40 to-blue-50/60 h-fit w-full rounded-xl md:rounded-2xl lg:rounded-[2rem] py-8 sm:py-10 md:py-12 lg:py-16 px-4 sm:px-6 md:px-8 lg:px-16 shadow-lg lg:shadow-[0_20px_60px_-15px_rgba(0,0,0,0.15)] border border-cyan-100/40 overflow-hidden">
+      {/* Animated background gradients */}
+      <motion.div 
+        className="absolute top-0 right-0 w-[300px] h-[300px] lg:w-[600px] lg:h-[600px] bg-gradient-to-br from-blue-400/8 to-transparent rounded-full blur-3xl pointer-events-none"
+        animate={{ 
+          scale: [1, 1.1, 1],
+          opacity: [1, 0.8, 1]
+        }}
+        transition={{ 
+          duration: 8,
+          repeat: Infinity,
+          ease: "easeInOut"
+        }}
+      />
+      <motion.div 
+        className="absolute -bottom-20 -left-20 lg:-bottom-32 lg:-left-32 w-[400px] h-[400px] lg:w-[500px] lg:h-[500px] bg-gradient-to-tr from-purple-400/6 to-transparent rounded-full blur-3xl pointer-events-none"
+        animate={{ 
+          scale: [1, 1.1, 1],
+          opacity: [1, 0.8, 1]
+        }}
+        transition={{ 
+          duration: 8,
+          repeat: Infinity,
+          ease: "easeInOut",
+          delay: 4
+        }}
+      />
       
-      {/* Content Section */}
-      <div className="flex-1 relative z-10 w-full text-center lg:text-left">
-        <div className="mb-4 md:mb-6 lg:mb-10 w-full">
-          <div className="inline-block mb-2 md:mb-3 px-2.5 py-1 sm:px-3 sm:py-1.5 md:px-4 md:py-2 bg-cyan-500/10 rounded-full border border-cyan-500/20">
-            <span className="text-[0.5rem] sm:text-[0.55rem] md:text-[0.6rem] lg:text-xs font-semibold text-cyan-600 tracking-wider uppercase">
-              Next-Gen IoT Platform
-            </span>
-          </div>
-          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-black font-sans tracking-tight leading-[1.1] sm:leading-tight">
-            <span className="bg-gradient-to-r from-gray-900 via-cyan-700 to-blue-900 bg-clip-text text-transparent drop-shadow-sm">
+      <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+        {/* Content Section */}
+        <motion.div 
+          className="text-center lg:text-left"
+          initial={{ opacity: 0, x: -30 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8 }}
+        >
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black font-sans tracking-tight leading-[1.1] mb-6 lg:mb-8">
+            <span className="bg-gradient-to-r from-gray-900 via-cyan-700 to-blue-900 bg-clip-text text-transparent">
               METACRUST
             </span>
           </h1>
-        </div>
 
-        <div className="space-y-3 sm:space-y-4 md:space-y-6 lg:space-y-10 w-full">
-          <div className="flex flex-wrap items-center justify-center lg:justify-start gap-1 sm:gap-1.5 md:gap-2 lg:gap-2.5 leading-tight">
-            <span className="py-0.5 md:py-1 text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl font-black bg-gradient-to-r from-cyan-500 to-cyan-600 bg-clip-text text-transparent leading-none">
-              Secure
-            </span>
-            
-            <span className="text-sm sm:text-base md:text-lg lg:text-xl text-cyan-300/50 leading-none">•</span>
-            
-            <span className="py-0.5 md:py-1 text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl font-black bg-gradient-to-r from-gray-700 to-gray-900 bg-clip-text text-transparent leading-none">
-              Scalable
-            </span>
-            
-            <span className="text-sm sm:text-base md:text-lg lg:text-xl text-cyan-300/50 leading-none">•</span>
-            
-            <span className="py-0.5 md:py-1 text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl font-black bg-gradient-to-r from-red-400 to-red-500 bg-clip-text text-transparent leading-none">
-              Energy-Efficient
-            </span>
+          {/* Feature Badges */}
+          <div className="flex flex-wrap items-center justify-center lg:justify-start gap-3 lg:gap-4 mb-6 lg:mb-8">
+            <motion.div 
+              className="flex items-center gap-2 px-4 py-2.5 rounded-full bg-gradient-to-br from-blue-50 to-blue-100 text-blue-900 font-semibold text-sm shadow-md hover:shadow-lg transition-all"
+              whileHover={{ y: -2 }}
+            >
+              <LockClosedIcon className="w-5 h-5" />
+              <span>Secure</span>
+            </motion.div>
+            <motion.div 
+              className="flex items-center gap-2 px-4 py-2.5 rounded-full bg-gradient-to-br from-green-50 to-green-100 text-green-900 font-semibold text-sm shadow-md hover:shadow-lg transition-all"
+              whileHover={{ y: -2 }}
+            >
+              <ActivityLogIcon className="w-5 h-5" />
+              <span>Scalable</span>
+            </motion.div>
+            <motion.div 
+              className="flex items-center gap-2 px-4 py-2.5 rounded-full bg-gradient-to-br from-orange-50 to-orange-100 text-orange-900 font-semibold text-sm shadow-md hover:shadow-lg transition-all"
+              whileHover={{ y: -2 }}
+            >
+              <LightningBoltIcon className="w-5 h-5" />
+              <span>Energy-Efficient</span>
+            </motion.div>
           </div>
 
-          <p className="text-[0.65rem] sm:text-xs md:text-sm lg:text-base font-bold text-gray-700 leading-relaxed max-w-3xl mx-auto lg:mx-0">
-            Device Communication & Monitoring Platform
+          {/* Subtitle */}
+          <p className="text-sm sm:text-base lg:text-lg text-slate-600 leading-relaxed mb-6 lg:mb-8 max-w-2xl mx-auto lg:mx-0">
+            Device Communication & Monitoring Platform that revolutionizes IoT connectivity. Seamlessly connect, monitor, and manage thousands of devices with enterprise-grade security and real-time insights.
           </p>
 
-          <div className="pt-2 sm:pt-3 md:pt-5 lg:pt-6 flex justify-center lg:justify-start w-full">
-            <AnimateButton />
+          {/* CTA Buttons */}
+          <div className="flex flex-col sm:flex-row gap-3 lg:gap-4 justify-center lg:justify-start mb-8 lg:mb-12">
+            <motion.a
+              href="#demo"
+              className="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-gradient-to-r from-blue-500 to-blue-600 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all"
+              whileHover={{ y: -2, boxShadow: "0 12px 35px rgba(59, 130, 246, 0.4)" }}
+            >
+              Request a Demo
+              <ArrowRightIcon className="w-5 h-5" />
+            </motion.a>
+            <motion.a
+              href="#learn"
+              className="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-white text-blue-600 font-semibold rounded-xl border-2 border-slate-200 shadow-md hover:shadow-lg hover:bg-slate-50 transition-all"
+              whileHover={{ y: -2 }}
+            >
+              Learn More
+            </motion.a>
           </div>
-        </div>
-      </div>
 
-      {/* Image Section */}
-      <div className="relative z-10 w-full lg:w-auto flex justify-center mt-2 sm:mt-4 lg:mt-0">
-        <img
-          src={dataImg}
-          className="w-full max-w-[280px] sm:max-w-[320px] md:max-w-[400px] lg:max-w-[500px] h-auto object-contain"
-          loading="lazy"
-          alt="MetaCrust Platform"
-        />
+          {/* Stats Section */}
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 lg:gap-6 pt-6 lg:pt-8 border-t-2 border-slate-200">
+            <div className="text-center lg:text-left">
+              <div className="text-2xl lg:text-3xl xl:text-4xl font-extrabold text-blue-600 mb-1">99.9%</div>
+              <div className="text-xs lg:text-sm text-slate-600 font-medium">Uptime Guarantee</div>
+            </div>
+            <div className="text-center lg:text-left">
+              <div className="text-2xl lg:text-3xl xl:text-4xl font-extrabold text-blue-600 mb-1">10M+</div>
+              <div className="text-xs lg:text-sm text-slate-600 font-medium">Devices Connected</div>
+            </div>
+            <div className="text-center lg:text-left">
+              <div className="text-2xl lg:text-3xl xl:text-4xl font-extrabold text-blue-600 mb-1">24/7</div>
+              <div className="text-xs lg:text-sm text-slate-600 font-medium">Support Available</div>
+            </div>
+          </div>
+        </motion.div>
+
+        {/* Image Section */}
+        <motion.div 
+          className="relative flex justify-center items-center"
+          initial={{ opacity: 0, x: 30 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8 }}
+        >
+          {/* Decorative circles */}
+          <motion.div 
+            className="absolute top-[-50px] right-[-50px] w-[200px] h-[200px] lg:w-[300px] lg:h-[300px] rounded-full bg-gradient-to-br from-blue-500 to-purple-500 opacity-10"
+            animate={{ rotate: 360 }}
+            transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+          />
+          <motion.div 
+            className="absolute bottom-[-30px] left-[-30px] w-[150px] h-[150px] lg:w-[200px] lg:h-[200px] rounded-full bg-gradient-to-br from-blue-500 to-purple-500 opacity-10"
+            animate={{ rotate: 360 }}
+            transition={{ duration: 20, repeat: Infinity, ease: "linear", delay: 5 }}
+          />
+          
+          <motion.div
+            className="relative w-full max-w-[280px] sm:max-w-[350px] md:max-w-[450px] lg:max-w-[600px]"
+            animate={{ y: [0, -20, 0] }}
+            transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+          >
+            <img
+              src={dataImg}
+              className="w-full h-auto object-contain drop-shadow-[0_20px_40px_rgba(59,130,246,0.15)]"
+              loading="lazy"
+              alt="MetaCrust Platform"
+            />
+          </motion.div>
+        </motion.div>
       </div>
     </div>
   );

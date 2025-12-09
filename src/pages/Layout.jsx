@@ -106,7 +106,7 @@ export default function Layout() {
         openModal={handleModalOpen}
       />
       <AnimatePresence>{openWindow && <NavWindow />}</AnimatePresence>
-      <div className="pb-10 md:pb-24 pt-24 z-0">
+      <div className="pt-24 z-0">
         <Outlet />
       </div>
       <Footer />

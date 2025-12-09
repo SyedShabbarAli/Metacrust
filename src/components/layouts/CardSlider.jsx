@@ -92,7 +92,7 @@ export default function CardSlider() {
                 alt={card.label}
               />
             </div>
-            <h2 className="px-3 py-4 md:py-5 text-sm sm:text-base md:text-lg lg:text-xl font-sans font-bold flex items-center justify-center">
+            <h2 className="px-3 py-4 md:py-5 text-xs sm:text-sm md:text-base lg:text-lg font-sans font-bold flex items-center justify-center">
               {card.label}
             </h2>
             {/* <img

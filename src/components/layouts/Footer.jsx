@@ -13,23 +13,23 @@ export default function Footer() {
               alt="MetaCrust Logo"
               className="w-32 md:w-36 object-contain mb-4"
             />
-            <p className="text-gray-600 text-sm text-center md:text-left max-w-xs">
+            <p className="text-black text-base text-center md:text-left max-w-xs">
               Secure, energy-efficient communication for IoT devices
             </p>
           </div>
 
           {/* Copyright and Legal */}
           <div className="text-center md:text-right">
-            <p className="text-sm text-gray-700 mb-3 font-medium">
+            <p className="text-base text-black mb-3 font-medium">
               © 2025{" "}
               <span className="text-red-500 font-semibold">Meta</span>
               <span className="text-cyan-600 font-semibold">Crust</span>
               {" "}Services Ltd.
             </p>
-            <p className="text-xs text-gray-600 mb-2">
+            <p className="text-sm text-black mb-2">
               MetaCrust™ is a trademark of MetaCrust Services Ltd.
             </p>
-            <p className="text-xs text-gray-600">
+            <p className="text-sm text-black">
               Provisional patent filings protect core technologies.
             </p>
           </div>

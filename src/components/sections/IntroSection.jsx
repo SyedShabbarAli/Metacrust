@@ -1,6 +1,7 @@
 import dataImg from "../../assets/workflows_io.png";
 import { motion } from "framer-motion";
 import { LockClosedIcon, ActivityLogIcon, LightningBoltIcon, ArrowRightIcon } from "@radix-ui/react-icons";
+import { Link } from "react-router-dom";
 
 export default function IntroSection() {
   return (
@@ -78,21 +79,23 @@ export default function IntroSection() {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-3 lg:gap-4 justify-center lg:justify-start mb-8 lg:mb-12">
-            <motion.a
-              href="#demo"
-              className="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-gradient-to-r from-blue-500 to-blue-600 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all"
-              whileHover={{ y: -2, boxShadow: "0 12px 35px rgba(59, 130, 246, 0.4)" }}
-            >
-              Request a Demo
-              <ArrowRightIcon className="w-5 h-5" />
-            </motion.a>
-            <motion.a
-              href="#learn"
-              className="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-white text-blue-600 font-semibold rounded-xl border-2 border-slate-200 shadow-md hover:shadow-lg hover:bg-slate-50 transition-all"
-              whileHover={{ y: -2 }}
-            >
-              Learn More
-            </motion.a>
+            <Link to="/connect">
+              <motion.div
+                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-gradient-to-r from-blue-500 to-blue-600 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all cursor-pointer"
+                whileHover={{ y: -2, boxShadow: "0 12px 35px rgba(59, 130, 246, 0.4)" }}
+              >
+                Request a Demo
+                <ArrowRightIcon className="w-5 h-5" />
+              </motion.div>
+            </Link>
+            <Link to="/about">
+              <motion.div
+                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-white text-blue-600 font-semibold rounded-xl border-2 border-slate-200 shadow-md hover:shadow-lg hover:bg-slate-50 transition-all cursor-pointer"
+                whileHover={{ y: -2 }}
+              >
+                Learn More
+              </motion.div>
+            </Link>
           </div>
 
           {/* Stats Section */}

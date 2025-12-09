@@ -42,7 +42,7 @@ export default function Services() {
 
   return (
     <>
-      <div className=" px-4 md:px-20 lg:px-32 flex flex-col gap-y-7 md:gap-y-11 font-sans">
+      <div className=" px-4 md:px-20 lg:px-20 flex flex-col gap-y-7 md:gap-y-11 font-sans">
         <div className="flex flex-col mt-4 ">
           <div className="self-center  bg-gradient-to-t px-10 lg:px-16  from-transparent to-[#bbf8ff]  rounded-2xl">
             <Heading label="What we offer" />
@@ -291,3 +291,4 @@ export default function Services() {
     </>
   );
 }
+

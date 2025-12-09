@@ -103,15 +103,15 @@ export default function IntroSection() {
           {/* Stats Section */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 lg:gap-6 pt-6 lg:pt-8 border-t-2 border-slate-200">
             <div className="text-center lg:text-left">
-              <div className="text-2xl lg:text-3xl xl:text-4xl font-extrabold mb-1" style={{ color: '#00BDFF' }}>99.9%</div>
+              <div className="text-2xl lg:text-3xl xl:text-4xl font-extrabold mb-1" style={{ color: '#06b6d4' }}>99.9%</div>
               <div className="text-xs lg:text-sm text-slate-600 font-medium">Uptime Guarantee</div>
             </div>
             <div className="text-center lg:text-left">
-              <div className="text-2xl lg:text-3xl xl:text-4xl font-extrabold mb-1" style={{ color: '#00BDFF' }}>10M+</div>
+              <div className="text-2xl lg:text-3xl xl:text-4xl font-extrabold mb-1" style={{ color: '#06b6d4' }}>10M+</div>
               <div className="text-xs lg:text-sm text-slate-600 font-medium">Devices Connected</div>
             </div>
             <div className="text-center lg:text-left">
-              <div className="text-2xl lg:text-3xl xl:text-4xl font-extrabold mb-1" style={{ color: '#00BDFF' }}>24/7</div>
+              <div className="text-2xl lg:text-3xl xl:text-4xl font-extrabold mb-1" style={{ color: '#06b6d4' }}>24/7</div>
               <div className="text-xs lg:text-sm text-slate-600 font-medium">Support Available</div>
             </div>
           </div>
@@ -126,12 +126,14 @@ export default function IntroSection() {
         >
           {/* Decorative circles */}
           <motion.div 
-            className="absolute top-[-50px] right-[-50px] w-[200px] h-[200px] lg:w-[300px] lg:h-[300px] rounded-full bg-gradient-to-br from-blue-500 to-purple-500 opacity-10"
+            className="absolute top-[-50px] right-[-50px] w-[200px] h-[200px] lg:w-[300px] lg:h-[300px] rounded-full opacity-10"
+            style={{ background: 'linear-gradient(to bottom right, #06b6d4, #06b6d4)' }}
             animate={{ rotate: 360 }}
             transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
           />
           <motion.div 
-            className="absolute bottom-[-30px] left-[-30px] w-[150px] h-[150px] lg:w-[200px] lg:h-[200px] rounded-full bg-gradient-to-br from-blue-500 to-purple-500 opacity-10"
+            className="absolute bottom-[-30px] left-[-30px] w-[150px] h-[150px] lg:w-[200px] lg:h-[200px] rounded-full opacity-10"
+            style={{ background: 'linear-gradient(to bottom right, #06b6d4, #06b6d4)' }}
             animate={{ rotate: 360 }}
             transition={{ duration: 20, repeat: Infinity, ease: "linear", delay: 5 }}
           />

@@ -12,11 +12,11 @@ export default function IntroSection() {
       <div className="flex-1 relative z-10 w-full text-center lg:text-left">
         <div className="mb-4 md:mb-6 lg:mb-10 w-full">
           <div className="inline-block mb-2 md:mb-3 px-2.5 py-1 sm:px-3 sm:py-1.5 md:px-4 md:py-2 bg-cyan-500/10 rounded-full border border-cyan-500/20">
-            <span className="text-[0.55rem] sm:text-[0.6rem] md:text-xs lg:text-sm font-semibold text-cyan-600 tracking-wider uppercase">
+            <span className="text-[0.5rem] sm:text-[0.55rem] md:text-[0.6rem] lg:text-xs font-semibold text-cyan-600 tracking-wider uppercase">
               Next-Gen IoT Platform
             </span>
           </div>
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-black font-sans tracking-tight leading-[1.1] sm:leading-tight">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-black font-sans tracking-tight leading-[1.1] sm:leading-tight">
             <span className="bg-gradient-to-r from-gray-900 via-cyan-700 to-blue-900 bg-clip-text text-transparent drop-shadow-sm">
               METACRUST
             </span>
@@ -24,25 +24,25 @@ export default function IntroSection() {
         </div>
 
         <div className="space-y-3 sm:space-y-4 md:space-y-6 lg:space-y-10 w-full">
-          <div className="flex flex-wrap items-center justify-center lg:justify-start gap-1 sm:gap-1.5 md:gap-2 lg:gap-3 xl:gap-4 leading-tight">
-            <span className="py-0.5 md:py-1 lg:py-2 text-sm sm:text-base md:text-lg lg:text-2xl xl:text-3xl 2xl:text-4xl font-black bg-gradient-to-r from-cyan-500 to-cyan-600 bg-clip-text text-transparent leading-none">
+          <div className="flex flex-wrap items-center justify-center lg:justify-start gap-1 sm:gap-1.5 md:gap-2 lg:gap-2.5 leading-tight">
+            <span className="py-0.5 md:py-1 text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl font-black bg-gradient-to-r from-cyan-500 to-cyan-600 bg-clip-text text-transparent leading-none">
               Secure
             </span>
             
-            <span className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-cyan-300/50 leading-none">•</span>
+            <span className="text-sm sm:text-base md:text-lg lg:text-xl text-cyan-300/50 leading-none">•</span>
             
-            <span className="py-0.5 md:py-1 lg:py-2 text-sm sm:text-base md:text-lg lg:text-2xl xl:text-3xl 2xl:text-4xl font-black bg-gradient-to-r from-gray-700 to-gray-900 bg-clip-text text-transparent leading-none">
+            <span className="py-0.5 md:py-1 text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl font-black bg-gradient-to-r from-gray-700 to-gray-900 bg-clip-text text-transparent leading-none">
               Scalable
             </span>
             
-            <span className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-cyan-300/50 leading-none">•</span>
+            <span className="text-sm sm:text-base md:text-lg lg:text-xl text-cyan-300/50 leading-none">•</span>
             
-            <span className="py-0.5 md:py-1 lg:py-2 text-sm sm:text-base md:text-lg lg:text-2xl xl:text-3xl 2xl:text-4xl font-black bg-gradient-to-r from-red-400 to-red-500 bg-clip-text text-transparent leading-none">
+            <span className="py-0.5 md:py-1 text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl font-black bg-gradient-to-r from-red-400 to-red-500 bg-clip-text text-transparent leading-none">
               Energy-Efficient
             </span>
           </div>
 
-          <p className="text-[0.7rem] sm:text-xs md:text-sm lg:text-base xl:text-lg 2xl:text-xl font-bold text-gray-700 leading-relaxed max-w-3xl mx-auto lg:mx-0">
+          <p className="text-[0.65rem] sm:text-xs md:text-sm lg:text-base font-bold text-gray-700 leading-relaxed max-w-3xl mx-auto lg:mx-0">
             Device Communication & Monitoring Platform
           </p>
 

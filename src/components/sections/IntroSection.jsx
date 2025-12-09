@@ -81,8 +81,9 @@ export default function IntroSection() {
           <div className="flex flex-col sm:flex-row gap-3 lg:gap-4 justify-center lg:justify-start mb-8 lg:mb-12">
             <Link to="/connect">
               <motion.div
-                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-gradient-to-r from-blue-500 to-blue-600 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all cursor-pointer"
-                whileHover={{ y: -2, boxShadow: "0 12px 35px rgba(59, 130, 246, 0.4)" }}
+                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all cursor-pointer"
+                style={{ background: '#00BDFF' }}
+                whileHover={{ y: -2, boxShadow: "0 12px 35px rgba(0, 189, 255, 0.4)" }}
               >
                 Request a Demo
                 <ArrowRightIcon className="w-5 h-5" />
@@ -101,15 +102,15 @@ export default function IntroSection() {
           {/* Stats Section */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 lg:gap-6 pt-6 lg:pt-8 border-t-2 border-slate-200">
             <div className="text-center lg:text-left">
-              <div className="text-2xl lg:text-3xl xl:text-4xl font-extrabold text-blue-600 mb-1">99.9%</div>
+              <div className="text-2xl lg:text-3xl xl:text-4xl font-extrabold mb-1" style={{ color: '#00BDFF' }}>99.9%</div>
               <div className="text-xs lg:text-sm text-slate-600 font-medium">Uptime Guarantee</div>
             </div>
             <div className="text-center lg:text-left">
-              <div className="text-2xl lg:text-3xl xl:text-4xl font-extrabold text-blue-600 mb-1">10M+</div>
+              <div className="text-2xl lg:text-3xl xl:text-4xl font-extrabold mb-1" style={{ color: '#00BDFF' }}>10M+</div>
               <div className="text-xs lg:text-sm text-slate-600 font-medium">Devices Connected</div>
             </div>
             <div className="text-center lg:text-left">
-              <div className="text-2xl lg:text-3xl xl:text-4xl font-extrabold text-blue-600 mb-1">24/7</div>
+              <div className="text-2xl lg:text-3xl xl:text-4xl font-extrabold mb-1" style={{ color: '#00BDFF' }}>24/7</div>
               <div className="text-xs lg:text-sm text-slate-600 font-medium">Support Available</div>
             </div>
           </div>

@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 export default function IntroSection() {
   return (
-    <div className="relative bg-gradient-to-br from-white via-cyan-50/40 to-blue-50/60 h-fit w-full rounded-xl md:rounded-2xl lg:rounded-[2rem] py-8 sm:py-10 md:py-12 lg:py-16 px-4 sm:px-6 md:px-8 lg:px-16 shadow-lg lg:shadow-[0_20px_60px_-15px_rgba(0,0,0,0.15)] border border-cyan-100/40 overflow-hidden">
+    <div className="relative bg-white h-fit w-full rounded-xl md:rounded-2xl lg:rounded-[2rem] py-8 sm:py-10 md:py-12 lg:py-16 px-4 sm:px-6 md:px-8 lg:px-16 shadow-lg lg:shadow-[0_20px_60px_-15px_rgba(0,0,0,0.15)] border border-cyan-100/40 overflow-hidden">
       {/* Animated background gradients */}
       <motion.div 
         className="absolute top-0 right-0 w-[300px] h-[300px] lg:w-[600px] lg:h-[600px] bg-gradient-to-br from-blue-400/8 to-transparent rounded-full blur-3xl pointer-events-none"
@@ -155,3 +155,4 @@ export default function IntroSection() {
     </div>
   );
 }
+

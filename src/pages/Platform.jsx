@@ -47,7 +47,7 @@ export default function Platform() {
         </div>
       </section>
 
-      <section className="relative bg-gradient-to-br from-slate-50 via-cyan-50 to-blue-50 px-4 md:px-10 py-16 rounded-3xl shadow-2xl xl:mx-32 border-2 border-cyan-100 overflow-hidden">
+      <section className="relative bg-gradient-to-br from-slate-50 via-cyan-50 to-blue-50 px-4 md:px-10 py-16 rounded-3xl shadow-2xl xl:mx-20 border-2 border-cyan-100 overflow-hidden">
         {/* Decorative background elements */}
         <div className="absolute top-0 right-0 w-72 h-72 bg-cyan-200/20 rounded-full blur-3xl -z-0" />
         <div className="absolute bottom-0 left-0 w-72 h-72 bg-blue-200/20 rounded-full blur-3xl -z-0" />
@@ -130,7 +130,7 @@ export default function Platform() {
         </motion.div>
       </section>
 
-      <section className="relative flex flex-col xl:px-36 items-center text-center py-16 px-4 md:px-6">
+      <section className="relative flex flex-col xl:px-20 items-center text-center py-16 px-4 md:px-6">
         {/* Background decoration */}
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-cyan-50/30 to-transparent -z-10 rounded-3xl" />
         
@@ -491,3 +491,4 @@ export default function Platform() {
     </>
   );
 }
+

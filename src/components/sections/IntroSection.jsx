@@ -1,4 +1,4 @@
-import dataImg from "../../assets/data-security.webp";
+import dataImg from "../../assets/workflows_io.png";
 import AnimateButton from "../layouts/AnimateButton";
 
 export default function IntroSection() {

@@ -94,7 +94,7 @@ export default function Home() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.5 }}
-          className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
+          className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3"
         >
           {CORE_FUN.map((feature, index) => (
             <motion.div
@@ -217,4 +217,5 @@ export default function Home() {
     </div>
   );
 }
+
 

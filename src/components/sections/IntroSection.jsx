@@ -91,7 +91,8 @@ export default function IntroSection() {
             </Link>
             <Link to="/about">
               <motion.div
-                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-white text-blue-600 font-semibold rounded-xl border-2 border-slate-200 shadow-md hover:shadow-lg hover:bg-slate-50 transition-all cursor-pointer"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-white font-semibold rounded-xl border-2 border-slate-200 shadow-md hover:shadow-lg hover:bg-slate-50 transition-all cursor-pointer"
+                style={{ color: '#00BDFF' }}
                 whileHover={{ y: -2 }}
               >
                 Learn More

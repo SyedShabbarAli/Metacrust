@@ -43,7 +43,7 @@ export default function IntroSection() {
         >
           {/* Decorative circles */}
           <motion.div 
-            className="absolute top-[-30px] right-[-30px] w-[120px] h-[120px] sm:w-[150px] sm:h-[150px] lg:top-[-50px] lg:right-[-50px] lg:w-[300px] lg:h-[300px] rounded-full opacity-10"
+            className="absolute top-[-20px] right-[-10px] w-[120px] h-[120px] sm:w-[150px] sm:h-[150px] lg:top-[-50px] lg:right-[-50px] lg:w-[300px] lg:h-[300px] rounded-full opacity-10"
             style={{ background: 'linear-gradient(to bottom right, #06b6d4, #06b6d4)' }}
             animate={{ rotate: 360 }}
             transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
@@ -155,3 +155,4 @@ export default function IntroSection() {
     </div>
   );
 }
+
